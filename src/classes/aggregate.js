@@ -39,7 +39,7 @@ ngAggregate.prototype.notifyChildren = function () {
             }
         }
         if (this.children[i]) {
-            this.children[i][NG_HIDDEN] = this.collapsed;
+            this.children[i][NG_HIDDEN] = this.collapsed || i === 0;
         }
         if (i > this.aggIndex && this.rowFactory.aggCache[i]) {
             var agg = this.rowFactory.aggCache[i];
